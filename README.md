@@ -29,3 +29,37 @@ Reverse engineering of Audi Ignition system
 - Pin 24 - Hall sender signal
 - Pin 25 - Coolant temp sensor
 
+# Map
+
+Maps on adress
+- 0x1E80
+- 0x3E80
+- 0x5E80
+- 0x7E80
+
+Maps lite peculiar, wrapped between col 4 and 5, so 1-3 is low rpm. 5 is max rpm. 
+Therefore maps looks odd when put in in a 3D graph.
+Col 9 is around 3k rpm
+
+Code repeated 2 times in bin, only second is used.
+
+0x4000 Program start
+0x552E Program end
+
+0x5B00 Parametrar
+0x5FF0 Parametrar ends
+
+0x6000 Repeated program here
+0x752E Program end
+
+0x7B00 Parametrar
+0x7FF0 Parametrar ends
+
+Mappar @
+0x7D70 - 0x7DEF 8x16
+0x7DF0 - 0x7E5F 7x16
+0x7E70 - 0x7EEF 8x16
+0x7EF0 - 0x7F5F 7x16
+
+16bits value @
+0x7B00 - 0x7B1E  15bytes
